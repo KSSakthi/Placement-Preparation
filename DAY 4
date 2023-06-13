@@ -1,1 +1,55 @@
+----------------------------TASK 4----------------------------------
+Algorithms: Write a function to determine if a given string is a palindrome.
 
+1. Given an integer x, return true if x is a palindrome, and false otherwise.
+
+Example 1:
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+
+Example 2:
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+
+CODING:
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if str(x) == str(x)[::-1]:
+            return True
+        else:
+            return False
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+----------------------------TASK 5----------------------------------
+Sorting and Searching: Implement a binary search algorithm. 
+
+1. Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+You must write an algorithm with O(log n) runtime complexity.
+
+Example 1:
+Input: nums = [-1,0,3,5,9,12], target = 9
+Output: 4
+Explanation: 9 exists in nums and its index is 4
+
+Example 2:
+Input: nums = [-1,0,3,5,9,12], target = 2
+Output: -1
+Explanation: 2 does not exist in nums so return -1
+
+CODING:
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l=0
+        r=len(nums)-1
+        while(l<=r):
+            mid=(l+r)//2
+            if(nums[mid]==target):
+                return mid
+            elif(target<nums[mid]):
+                r=mid-1
+            elif(target>nums[mid]):
+                l=mid+1
+        return -1
