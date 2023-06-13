@@ -1,1 +1,80 @@
+---------------------------------------TASK 1-------------------------------------
+STRING MANIPULATION: WRITE A FUNCTION TO REVERSE A STRING.
+
+1. Write a function that reverses a string. The input string is given as an array of characters s. You must do this by modifying the input array in-place with O(1) extra memory
+
+Example1 :
+Input : s = ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
+Example2 : 
+Input : s = ["H","a","n","n","a","h"]
+Output : ["h","a","n","n","a","H"]
+
+CODING:
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        s.reverse()
+        print (s)
+---------------------------------------------------------------------------------
+2. Reverse Vowels of a string
+   Given a string s , reverse only all the vowels in the string and return it.
+   The vowels are ‘a’ , ‘e’, ‘i’,’o’,’u’ and they can appear in both lower and upper cases more than once.
+ 
+Example1:
+Input : s = "hello"
+Output : "holle"
+Example2:
+Input : s = "leetcode"
+Output : "leotcede"
+
+CODING: 
+class Solution:
+    def reverseVowels(self, s: str) -> str:
+        chars = list(s)
+        vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
+        l = 0
+        r = len(s) - 1
+        while l < r:
+            while l < r and chars[l] not in vowels:
+                l += 1
+            while l < r and chars[r] not in vowels:
+                r -= 1
+            chars[l], chars[r] = chars[r], chars[l]
+            l += 1
+            r -= 1
+        return ''.join(chars)
+---------------------------------------------------------------------------------
+
+3. Example1: 
+    Input : -12345
+   Output : -54321
+
+    Example2:
+    Input : 678
+    Output : 876
+
+  CODING:
+   s = input()
+   first = s[-(len(s))]
+
+   if first == '-':
+    	result = s[(len(s)-1):0:-1]
+    	print('-'+result)
+    else:
+    	result = s[::-1]
+   	print(result)
+---------------------------------------------------------------------------------
+
+4. Example1:
+   Input: 34
+	Thiagarajar College of Engineering
+   Output : gnireenignE fo egelloC rajaragaihT
+
+  CODING: 
+  n=int(input(''))
+  s=input('')
+  result=s[::-1]
+  print(result)
+---------------------------------------------------------------------------------
+
 
