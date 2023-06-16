@@ -4,18 +4,19 @@ Dynamic Programming: Solve the Fibonacci sequence using dynamic programming.
 
 CODING :
 
-def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n-1) + fibonacci(n-2)
- 
-n = int(input("Enter a number: "))
-print(fibonacci(n))
+def fib(n):
+    if n==0:
+        return 0
+    elif n==1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+n=int(input("Enter a positive integer:"))
+for i in range(n):
+    print(fib(i), end = " ")
 
-OUTPUT 1 :
-Enter a number: 1
-1
 
-OUTPUT 2:
-Enter a number: 7
-13
+OUTPUT:
+Enter a positive integer:
+7
+0 1 1 2 3 5 8 
