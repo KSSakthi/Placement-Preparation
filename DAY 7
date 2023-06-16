@@ -16,7 +16,12 @@ for i in range(n):
     print(fib(i), end = " ")
 
 
-OUTPUT:
+OUTPUT 1:
+Enter a positive integer:
+7
+0 1 1 2 3 5 8 
+
+OUTPUT 2:
 Enter a positive integer:
 7
 0 1 1 2 3 5 8 
