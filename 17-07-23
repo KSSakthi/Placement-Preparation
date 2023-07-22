@@ -76,15 +76,13 @@ Sample output:
 -----------------------
 CODE:
 sum = int(input("Enter sum:"))
-n = int(input("Enter n:"))
-arr = list(map(int, input().split()))
+a=list(map(int,input().split(" ")))
+n = len(a)
 if n < 2:
     print('-1')
-arr = sorted(arr)
-for i in range(n-1):
-    if arr[i] + arr[i+1] < sum:
-        print(arr[i] * arr[i+1])
-        break
+k = sorted(a)
+if k[0] + k[1] < sum:
+    print(k[0] * k[1])
 else:
     print('0')
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
