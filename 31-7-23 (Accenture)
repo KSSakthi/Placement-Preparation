@@ -1,0 +1,61 @@
+Question 1 - Length of last word
+
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5.
+
+Code:
+def lengthOfLastWord(self, s: str) -> int:
+        count=0
+        s=s.strip()
+        for i in range (len(s)-1,-1,-1):
+            if(s[i]!= ' '):
+                count+=1
+            else:
+                break
+        return(count)
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Question 2 - Password Checker
+
+Write a function CheckPassword(str) which will accept the string as an argument or parameter and validates the password. It will return 1 if the conditions are satisfied else it’ll return 0?
+
+The password is valid if it satisfies the below conditions:
+
+It should contain at least 4 characters.
+At least 1 numeric digit should be present.
+1 Capital letter should be there.
+Password should not contain space or slash.
+The starting character should not be a number.
+
+Sample Test Case:
+Input:
+bB1_89
+Output:
+1
+
+Code:
+def check_password(s,n):
+    if(n<4):
+        return 0
+    if(s[0].isdigit()):
+        return 0
+    caps=0
+    numeric=0
+    for i in range(n):
+        if(s[i]==' ' or s[i]=='/'):
+            return 0
+        if(s[i]>='A' and s[i]<='Z'):
+            caps+=1
+        elif(s[i].isdigit()):
+            numeric+=1
+    if(caps>0 and numeric>0):
+        return 1
+    else:
+        return 0
+
+
+s=input()
+a=len(s)
+print(check_password(s,a))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
