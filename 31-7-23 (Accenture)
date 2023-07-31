@@ -15,6 +15,11 @@ def lengthOfLastWord(self, s: str) -> int:
                 break
         return(count)
 
+
+(or)
+
+def lengthOfLastWord(self, s: str) -> int:
+        return(len(s.split().[-1]))
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Question 2 - Password Checker
 
