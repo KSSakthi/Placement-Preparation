@@ -1,0 +1,49 @@
+1. Write a program to find the second largest element in an array.
+n = list(map(int,input().split()))
+a = sorted(n)
+print(a)
+print(a[-2])
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write a program to sort an array in ascending order using the bubble sort algorithm.
+arr = list(map(int,input().split()))
+print("Before Sorting:", arr)
+for i in range(len(arr)):
+    for j in range(0, len(arr)- i- 1):
+      if arr[j] > arr[j + 1]:
+        temp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+print("After Sorting:", arr)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a program to reverse a linked list.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Write a program to find the factorial of a number using recursion.
+def fact(n):
+   if n == 1:
+       return n
+   else:
+       return n*fact(n-1)
+n = int(input())
+if n > 0:
+   print("The factorial of", n, "is", fact(n))
+elif n == 0:
+   print("The factorial of 0 is 1")
+else:
+   print("Factorial does not exist for negative number")
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. Write a program to check if a given string is an anagram.
+s1=input()
+s2=input()
+a=sorted(s1)
+print(a)
+b=sorted(s2)
+print(b)
+if(a==b):
+    print("Anagram")
+else:
+    print("Not Anagram")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
