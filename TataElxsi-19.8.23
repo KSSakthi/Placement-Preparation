@@ -47,4 +47,33 @@ else:
     s=s.replace(c, c.upper())
 print(s)
 -----------------------------------------------------------------------------------------------------------------------------------------
-3. 
+3. You’re given a string where multiple characters are repeated consecutively. You’re supposed to reduce the size of this string using mathematical logic given as in the example below :
+
+Input :
+aabbbbeeeeffggg
+
+Output:
+a2b4e4f2g3
+
+Input :
+abbccccc
+
+Output:
+ab2c5
+
+-------------------
+CODE:
+s=input().strip()
+d={}
+for i in s:
+    if i not in d:
+        d[i]=s.count(i)
+print(d)
+for a,b in d.items():
+    if int(b)!=1:
+        print(a,end="")
+        print(b,end="")
+    else:
+        print(a,end="")
+-----------------------------------------------------------------------------------------------------------------------------------------
+4. 
