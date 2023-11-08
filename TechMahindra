@@ -1,0 +1,49 @@
+Nov 8 | Day1
+
+1. Build a program for calculating and returning the sums of absolute differences between adjacent numbers in arrays of positive integers. This must be calculated from the position determined by the current user.
+In the case of this coding problem, you use three positional arguments through a findTotalSum function. The three inputs you would require are the number of elements inside the array, the elements in the array and the position from where this function will take place.
+For example, suppose the total number of elements is 5 and these are the elements:
+1 2 3 6 4
+Then, if we decide to start from the 3rd position or enter 3 as input, the function will occur from ‘3’, the 3rd number in the array.
+Hence, the sum would be a total of (6-3)+(4-6)= 5
+-----------------------------------------------------------------------
+Coding:
+n=int(input())
+nums=list(map(int,input().split()))
+val=int(input())
+sum=0
+for i in range(val-1, n-1):
+    sum=sum+abs(nums[i]-nums[i+1])
+print(sum)
+
+
+Output:
+5
+1 2 3 6 4
+3
+5
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Calculate the total interest on loans for an array of amounts. However, till the amount of 2000, there is no interest applicable, but, there is a 20% interest applicable for the remaining amounts in the array.
+In this case, we will be writing a calculate TotalInterest function that receives the first input as the number of amounts in the array and the second input as the array of amounts.
+For instance, if there are 5 amounts with the first input as 5 and the amounts being 2000, 4000, 6000, 8000 and 10000.
+The total sum would be = 20% of 4000 + 20% of 6000 + 20% of 8000 + 20% of 10000 = 5600 (as the 2000 will not be considered for interest)
+-----------------------------------------------------------------------
+Coding:
+n=int(input())
+nums=list(map(int,input().split()))
+sum=0
+for i in nums:
+    if i==2000:
+        continue
+    else:
+        sum+=i*(20/100)
+print(int(sum))
+
+
+Output:
+5
+2000 4000 6000 8000 10000
+5600
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
